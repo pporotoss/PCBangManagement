@@ -64,7 +64,7 @@ public class ClientRegistForm extends JFrame {
 		btArray[1].addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);				
+				close();
 			}
 		});
 		
@@ -76,7 +76,7 @@ public class ClientRegistForm extends JFrame {
 		
 		pack();
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setVisible(true);
 		
 	}
@@ -132,5 +132,7 @@ public class ClientRegistForm extends JFrame {
 		
 	}
 	
-
+	public void close(){
+		this.dispose();
+	}
 }
