@@ -26,9 +26,9 @@ public class AdminLogin extends JFrame {
 	JLabel la_id, la_pwd;
 	JTextField txt_id, txt_pwd;
 	JButton loginBT;
-	String id = "admin";
-	String pwd = "admin";
-	String host = "jdbc:oracle:thin:@70.12.109.61:1521";
+	String id = "pcbang";
+	String pwd = "pcbang";
+	String host = "jdbc:oracle:thin:@localhost:1521";
 	LoginWindow win;	
 	
 	public AdminLogin() {		
@@ -95,7 +95,6 @@ public class AdminLogin extends JFrame {
 			 * dto.setUser_id(rs.getString("user_id"));
 			 */
 			while (rs.next()) {
-				// 2013-03-30 DTO 생성자 호출 안해서 예외발생함(디버그로 찾아냄)
 				dto = new AdminDTO();
 				// 레코드에서 id와 pwd정보 set
 				dto.setId(rs.getString("id"));

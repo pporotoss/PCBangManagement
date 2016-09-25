@@ -8,10 +8,10 @@ import java.sql.SQLException;
 
 public class ConnectionManager {
 	private static ConnectionManager instance;	// 立加侩 按眉
-	private String host = "jdbc:oracle:thin:@70.12.109.61:1521";
+	private String host = "jdbc:oracle:thin:@localhost:1521";
 	
-	private String id = "admin";
-	private String pwd = "admin";
+	private String id = "pcbang";
+	private String pwd = "pcbang";
 	
 	private ConnectionManager(){	// 积己磊 private		
 	}

@@ -7,13 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectionManager {
-	public static final String CON_ADDR = "70.12.109.54";
+	public static final String CON_ADDR = "localhost";
 	
 	private static ConnectionManager instance;
 
-	String host = "jdbc:oracle:thin:@70.12.109.61:1521";
-	String id = "admin";
-	String pwd = "admin";
+	String host = "jdbc:oracle:thin:@localhost:1521";
+	String id = "pcbang";
+	String pwd = "pcbang";
 
 	public static ConnectionManager getInstane() {
 		if (instance == null) {

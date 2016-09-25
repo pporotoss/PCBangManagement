@@ -27,7 +27,7 @@ public class InsertProduct extends JFrame{
 	StockManagement sm;
 	JPanel p_west, p_center, p_south;
 	JLabel[] label = new JLabel[4];
-	String[] name_la = {"   상품번호 :  ","   상품명 :  ","   상품가격 :  ","   수  량 :  "};
+	String[] name_la = {"   상품코드 :  ","   상품명 :  ","   상품가격 :  ","   수  량 :  "};
 	JTextField[] txt = new JTextField[4];
 	JButton btn;
 	
