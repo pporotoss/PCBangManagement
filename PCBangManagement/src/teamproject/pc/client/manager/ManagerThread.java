@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import teamproject.pc.main.MainWindow;
+
 /*
 	※ 메시지 실시간 청취를 위한 스레드 정의!!!
  */
@@ -72,17 +74,12 @@ public class ManagerThread extends Thread{
 						}
 					}else if(client[1].startsWith("@@login@@")){// 입력받은게 로그인메시지이면,
 						String user_id = client[1].substring(client[1].indexOf("@@login@@")+9);
-						if(client[0].equals("70.12.109.53")){// 첫번째 자리
+						
+						for(int i = 0; i < MainWindow.ipList.length; i++){
 							
-							managerClient.mainServer.getMainWindow().init(0,user_id);
-							
-						}else if(client[0].equals("70.12.109.54")){	// 두번째 자리							
-							
-							managerClient.mainServer.getMainWindow().init(1,user_id);
-							
-						}else if(client[0].equals("70.12.109.61")){	// 세번째 자리
-							
-							managerClient.mainServer.getMainWindow().init(2,user_id);
+							if(client[0].equals(MainWindow.ipList[i])){
+								managerClient.mainServer.getMainWindow().init(i, user_id);	// 로그인한 자리 변경.
+							}
 							
 						}
 					}

@@ -25,6 +25,8 @@ import teamproject.pc.product.StockManagement;
 import teamproject.pc.server.MainServer;
 
 public class MainWindow extends JFrame {
+	public static final String[] ipList = {"192.168.0.90"};	// 고객용 PC IP주소 입력 20개까지 입력 가능.
+	
 	JPanel top_pan, center_pan, bottom_pan, inner_pan;
 	String[] top_txt = { "상품계산", "재고관리", "회원관리","화면캡쳐"};
 	String[] label_txt = {"아이디", "시작시간", "이용시간", "이용요금" };
@@ -36,7 +38,6 @@ public class MainWindow extends JFrame {
 	Timer timer;
 	MainDAO dao;
 	MemberList member;
-	String[] ipList = {"70.12.109.53","70.12.109.54","70.12.109.61"};
 	ManagerClient manager;
 	ArrayList<String> idList = new ArrayList<String>();
 	ArrayList<String> payList = new ArrayList<String>();
